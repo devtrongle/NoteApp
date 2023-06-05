@@ -41,7 +41,7 @@ import com.akaiz.noteapp.feature_note.domain.util.NotesEvent
 import com.akaiz.noteapp.feature_note.presentation.notes.components.NoteItem
 import com.akaiz.noteapp.feature_note.presentation.notes.components.OrderSection
 import com.akaiz.noteapp.feature_note.presentation.util.Screen
-import com.akaiz.noteapp.ui.theme.setBackgroundColor
+import com.akaiz.noteapp.ui.theme.SetStatusBarColor
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -53,7 +53,7 @@ fun NoteScreen(
     val state = viewModel.state.value
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
-    setBackgroundColor(MaterialTheme.colorScheme.background)
+    SetStatusBarColor(MaterialTheme.colorScheme.background)
 
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },

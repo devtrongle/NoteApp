@@ -43,7 +43,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.akaiz.noteapp.feature_note.domain.model.Note
 import com.akaiz.noteapp.feature_note.presentation.add_edit_note.components.TransparentHintTextField
-import com.akaiz.noteapp.ui.theme.setBackgroundColor
+import com.akaiz.noteapp.ui.theme.SetStatusBarColor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -65,7 +65,7 @@ fun AddEditNoteScreen(
         )
     }
 
-    setBackgroundColor(noteBackgroundAnimatable.value)
+    SetStatusBarColor(noteBackgroundAnimatable.value)
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
 

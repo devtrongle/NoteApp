@@ -72,7 +72,7 @@ fun NoteAppTheme(
 }
 
 @Composable
-fun setBackgroundColor(color: Color) {
+fun SetStatusBarColor(color: Color) {
     val systemUiController = rememberSystemUiController()
     SideEffect {
         systemUiController.setStatusBarColor(
